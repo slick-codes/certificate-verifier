@@ -51,6 +51,30 @@ app.use("/", express.static(path.join(__dirname, "..", "static")))
 app.use(cors())
 app.use(morgan("dev"))
 
+
+
+app.get("/", function (req, res, next) {
+    res.render("index", {})
+})
+
+
+app.get("/dashboard", function (req, res, next) {
+    res.render("dashboard", {})
+})
+
+
+app.get("/preview", function (req, res, next) {
+    res.render("preview", {})
+})
+
+
+app.get("/login", function (req, res, next) {
+    res.render("login", {})
+})
+
+
+
+
 // setup socketio middleware
 app.use(function (req, res, next) {
     req.io = req.app.get("io")
