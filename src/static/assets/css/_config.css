@@ -1,0 +1,17 @@
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+*{
+    margin:0;
+    padding:0;
+    list-style:none;
+    box-sizing:border-box;
+    font-family:poppins;
+}
+
+button{
+    border:none;
+}
+
+:root{
+    --primary-color: #383880;
+}

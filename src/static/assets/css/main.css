@@ -1,0 +1,45 @@
+@import url(./_config.css);
+
+
+.nav{
+    background-color: var(--primary-color);
+    padding:0px 4em;
+    color:white;
+
+    .nav__contents{
+        display:flex;
+        padding:1em 0;
+        justify-content:space-between;
+        align-items: center;
+    }
+}
+.logo__container{
+
+& .logo__border{
+    border-radius:140em;
+    border:solid 4px white;
+    /* border-bottom:2px; */
+    background-color:white;
+    width:3em;
+    height:3em;
+    display:flex;
+    
+    & img{
+        width:100%;
+    }
+}
+
+}
+.nav__link_container{
+    display:flex;
+    padding-left:auto;
+    gap:1em;
+}
+
+a{
+    color:white;
+    text-transform: uppercase;
+    font-size:.8rem;
+    font-weight:500;
+    text-decoration:none;
+}

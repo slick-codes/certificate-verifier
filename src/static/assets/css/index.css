@@ -1,0 +1,95 @@
+@import url(./main.css);
+
+.main{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height: calc(100vh - 5.3em );
+    padding-bottom:14em;
+
+    .main__container{
+        width:100%;
+        justify-content: center;
+        align-items:center;
+        display:flex;
+        flex-flow:column;
+    }
+}
+
+
+h1{
+    padding:.5em 0;
+    text-transform:uppercase;
+    font-weight:900;
+    color: var(--primary-color);
+}
+
+input{
+    padding:1em 2em;
+    width: 90%;
+    max-width:35em;
+    border-radius:.3em;
+    border:solid 1px var(--primary-color);
+    text-align:center;
+    border-top-right-radius:0;
+    border-bottom-right-radius:0;
+    background-color:white;
+    font-weight:500;
+}
+
+form {
+    display:flex;
+    align-items:Center;
+    justify-content: center;
+    gap:0em;
+}
+
+button {
+    padding:0em 2em;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:none;
+    background-color:var(--primary-color);
+    color:white;
+    border-radius:.5em;
+    border-top-left-radius:0;
+    border-bottom-left-radius:0;
+    cursor: pointer;
+
+    &:active{
+        background-color:black;
+        color:white;
+    }
+
+    & svg{
+        width:1.5em;
+    }
+}
+
+.main{
+    background-image: url(./../images/image-2.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+    position: relative;
+
+    .main__container{
+        position:relative;
+    }
+}
+
+.main::before{
+    content:"";
+    display:block;
+    background-color:rgba(255, 255, 255, 0.257);
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgb(255,255,255);
+background: -moz-linear-gradient(0deg, rgba(255,255,255,1) 30%, rgba(255,255,255,0.6426439606741573) 80%);
+background: -webkit-linear-gradient(0deg, rgba(255,255,255,1) 30%, rgba(255,255,255,0.6426439606741573) 80%);
+background: linear-gradient(0deg, rgba(255,255,255,1) 30%, rgba(255,255,255,0.6426439606741573) 80%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1);
+}
