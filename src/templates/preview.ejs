@@ -9,55 +9,51 @@
 </head>
 
 <body>
-    <nav class="nav">
-        <div class="nav__contents">
-            <section class="logo__container">
-                <div class="logo__border">
-                    <img src="/assets/images/download-removebg-preview-1.png" alt="Logo" class="logo" />
+    <%- include("partials/nav.ejs", {}) %>
+        <main class="main">
+            <dev class="main__container">
+                <div class="info__table">
+                    <table>
+                        <tr>
+                            <td>Matriculation Numb</td>
+                            <td>
+                                <%= cert.registrationNumber %>
+                            </td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Holder's Name</td>
+                            <td>
+                                <%= `${cert.firstName} ${cert.lastName}` %>
+                            </td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>School</td>
+                            <td>
+                                <%= cert.school %>
+                            </td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Year Of Graduation</td>
+                            <td>
+                                <%= cert.graduationYear %>
+                            </td>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
-            </section>
-            <section class="nav__navigation">
-                <div class="nav__link_container">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Qualifications</a></li>
-                    <li><a href="#">Achievements</a></li>
+                <div class="preview__continer">
+                    <object allowfullscreen froameborder="0" javascript="allow" data="<%= cert.certUrl %>"
+                        type="application/pdf">
+                        <embed src="<%= cert.certUrl %>" type="application/pdf" fraomeborder="0" allowfullscreen>
+                        <p>This browser does not support PDFs. Please download the PDF to view it</p>
+                        </embed>
+                    </object>
                 </div>
-            </section>
-        </div>
-    </nav>
-    <main class="main">
-        <dev class="main__container">
-            <div class="info__table">
-                <table>
-                    <tr>
-                        <td>ID:</td>
-                        <td>Nd2019/1010/001</td>
-                    </tr>
-                    <tr>
-                        <td>ID:</td>
-                        <td>Nd2019/1010/001</td>
-                    </tr>
-                    <tr>
-                        <td>ID:</td>
-                        <td>Nd2019/1010/001</td>
-                    </tr>
-                    <tr>
-                        <td>ID:</td>
-                        <td>Nd2019/1010/001</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="preview__continer">
-                <object allowfullscreen froameborder="0" javascript="allow" data="/assets/images/Resume.pdf"
-                    type="application/pdf">
-                    <embed src="/assets/images/Resume.pdg" type="application/pdf" fraomeborder="0" allowfullscreen>
-                    <p>This browser does not support PDFs. Please download the PDF to view it</p>
-                    </embed>
-                </object>
-            </div>
-        </dev>
-    </main>
+            </dev>
+        </main>
 </body>
 
 </html>

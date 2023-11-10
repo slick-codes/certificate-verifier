@@ -37,7 +37,7 @@ input{
     font-weight:500;
 }
 
-form {
+.form {
     display:flex;
     align-items:Center;
     justify-content: center;

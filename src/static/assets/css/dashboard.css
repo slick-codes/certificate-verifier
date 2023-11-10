@@ -4,13 +4,18 @@
 
 
 .nav{
+    & .nav__link_container{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
 
     & button{
         padding:.5em 1em;
         color:white;
         font-weight:700;
 
-        &:first-child{
+        &:nth-child(2){
             background-color: #399988;
         }
 
@@ -50,6 +55,14 @@ table tr:first-child{
     background:rgb(194, 194, 194);
 }
 
+table tr{
+    border-top:none;
+    border-bottom:none;
+}
+table tr:nth-child(odd):not(:first-child) {
+    background:rgb(236, 236, 236);
+}
+
 .form{
     width:100%;
     height:100vh;
@@ -63,7 +76,7 @@ table tr:first-child{
 }
 
 
-form{
+form, .second-form{
     background-color:white;
     padding:3em 6em;
     border-radius:1em;
@@ -167,4 +180,107 @@ input[type="submit"]:active{
 
 button{
     cursor:pointer;
+}
+
+
+.image_pdf_selector{
+    & svg.upload-icon{
+        display:initial;
+    }
+
+    & svg.loading-icon{
+        display:none;
+        width:5em;
+        height:4em;
+    }
+
+    & svg.success-icon{
+        display: none;
+        color:#399988;
+        width:4em;
+        height:4em;
+    }
+}
+
+
+
+.image_pdf_selector.success{
+    border:solid 3px #399988;
+
+    & svg.upload-icon{
+        display:none;
+    }
+
+    & svg.loading-icon{
+        display:none;
+    }
+
+    & svg.success-icon{
+        display: initial;
+    }
+}
+
+
+.image_pdf_selector.loading{
+    & svg.upload-icon{
+        display:none;
+    }
+
+    & svg.loading-icon{
+        display:initial;
+    }
+
+    & svg.success-icon{
+        display: none;
+    }
+}
+
+
+
+
+.success-submition .qr svg{
+    display:block;
+    width:15em;
+    height:15em;
+    /* padding:3em; */
+}
+
+
+.qr {
+    display:flex;
+    flex-flow:column;
+    justify-content:center;
+    align-items:center;
+    padding:0px 4em;
+
+
+    & button{
+        padding:1em 2em;
+        color:white;
+        background-color: var(--primary-color);
+        border-radius:.3em;
+        font-weight: 600;
+
+        &:active{
+            background-color:black;
+            color:white;
+        }
+    }
+
+    & h1{
+        color:#399988;
+        padding-bottom:.5em;
+    }
+
+    & .close__button{
+        padding-top:2em;
+
+        & svg{
+            width:2em;
+            height:2em;
+            cursor:pointer;
+            stroke-width:5px;
+            border-radius:59em;
+        }
+    }
 }
