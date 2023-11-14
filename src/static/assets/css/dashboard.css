@@ -284,3 +284,13 @@ button{
         }
     }
 }
+
+.logout-form{
+    padding:initial !important;
+    background-color: initial !important;
+}
+
+table a{
+    color:var(--primary-color);
+    text-decoration:underline;
+}

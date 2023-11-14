@@ -13,7 +13,7 @@
     align-items:center;
     justify-content:center;
     background:rgb(226, 226, 226);
-    padding:4em 0;
+    padding:4em .5em;
 
     & table{
         width:100%;
@@ -48,11 +48,27 @@
 }
 
 
-object{
-    border:solid 1em rgb(221, 221, 221);
-    background-color:rgb(221, 221, 221);
-    border-radius:1em;
-    width:100%;
-    max-width:60em;
-    height:40em;
+.preview__continer{
+    & object, & embed, & img{
+        border:solid 1em rgb(221, 221, 221);
+        background-color:rgb(221, 221, 221);
+        border-radius:1em;
+        width:100%;
+        max-width:60em;
+        /* height:40em; */
+    }
+
+}
+
+
+
+
+@media (max-width:600px) {
+    
+    .info__table{
+
+        & table{
+            font-size: .8rem !important;
+        }
+    }    
 }

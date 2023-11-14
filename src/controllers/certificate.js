@@ -4,9 +4,9 @@ const qr = require("qr-image")
 
 module.exports.createCert = async function (req, res, next) {
     try {
-        console.log("got here")
         const uniqueId = uuid.v1()
-        const qrSvg = qr.imageSync(`/preview/${uniqueId}`, { type: "SVG" })
+        const qrSvg = qr.imageSync(`${req.baseurl}/preview/${uniqueId}`, { type: "SVG" })
+
         const certificate = await Certificate.create({
             ...req.body,
             uniqueId,
@@ -17,5 +17,6 @@ module.exports.createCert = async function (req, res, next) {
         res.redirect(`/dashboard?id=${certificate.uniqueId}&&success=true`)
     } catch (error) {
         // handle error
+        console.log("something went wrong", error)
     }
 }

@@ -43,7 +43,11 @@
         <div class="nav__link_container">
           <a href="/">Home</a>
           <button class="modal_toggler">Create Cert</button>
-          <button>Exit</button>
+          <form class="logout-form" action="/logout" method="post">
+            <button>
+              Exit
+            </button>
+          </form>
         </div>
       </section>
     </div>
@@ -58,30 +62,30 @@
           <th>Holder's Name</th>
           <th>School</th>
           <th>Graduation Year</th>
+          <th>View</th>
         </tr>
 
         <% for( let i in certificates ){ %>
-          <a href="/preview/<%= certificates[i].uniqueId %>">
-            <tr>
-              <a href="/preview/<%= certificates[i].uniqueId  %>"></a>
-              <td>
-                <%= parseInt(i) + 1 %>
-              </td>
-              <td>
-                <%= certificates[i].registrationNumber%>
-              </td>
-              <td>
-                <%= `${certificates[i].firstName} ${certificates[i].lastName}` %>
-              </td>
-              <td>
-                <%= certificates[i].school %>
-              </td>
-              <td>
-                <%= certificates[i].graduationYear %>
-              </td>
-
-            </tr>
-          </a>
+          <tr>
+            <td>
+              <%= parseInt(i) + 1 %>
+            </td>
+            <td>
+              <%= certificates[i].registrationNumber%>
+            </td>
+            <td>
+              <%= `${certificates[i].firstName} ${certificates[i].lastName}` %>
+            </td>
+            <td>
+              <%= certificates[i].school %>
+            </td>
+            <td>
+              <%= certificates[i].graduationYear %>
+            </td>
+            <td>
+              <a href="/preview/<%= certificates[i].uniqueId%>">View</a>
+            </td>
+          </tr>
           <%}%>
 
       </tbody>
@@ -90,7 +94,7 @@
 
   <div class="form modal <%= !query?.success? 'hidden': '' %>">
     <% if( !query?.success){%>
-      <form action="/create/cert" method="post" enctype="multipart/form-data">
+      <form action="/create/cert" class="main-form" method="post" enctype="multipart/form-data">
         <div class="form__cont">
           <nav class="form__nav">
             <h1>Add Certificate</h1>
@@ -225,8 +229,9 @@
         uploadButton.classList.remove("success")
         uploadButton.classList.remove("upload")
 
+        console.log(pdfSelectButton)
         document
-          .querySelectorAll("form input[type='file']")
+          .querySelectorAll(".main-form input[type='file']")
           .forEach((file) => file.remove());
 
         event.preventDefault();
@@ -236,8 +241,8 @@
         file.name = "pdf_file";
         file.style.display = "none";
         file.accept =
-          "application/pdf, application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml";
-        document.querySelector("form").appendChild(file);
+          "image/*";
+        document.querySelector("form.main-form").appendChild(file);
         file.click();
 
         file.oninput = function () {
@@ -259,10 +264,10 @@
     }
     const closeSuccessButton = document.querySelector(".close-success-button")
 
-    console.log(closeSuccessButton)
-    closeSuccessButton.onclick = function () {
-      window.location.href = "/dashboard"
-    }
+    if (closeSuccessButton)
+      closeSuccessButton.onclick = function () {
+        window.location.href = "/dashboard"
+      }
 
     // const form = document.querySelector("form")
 

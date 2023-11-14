@@ -5,6 +5,8 @@
     background-color: var(--primary-color);
     padding:0px 4em;
     color:white;
+    position:sticky;
+    top:0;
 
     .nav__contents{
         display:flex;
@@ -42,4 +44,27 @@ a{
     font-size:.8rem;
     font-weight:500;
     text-decoration:none;
+}
+
+.nav__navigation{
+    & button {
+        background-color: #399988;
+        padding: .5em 1.5em;
+        border-radius: .2em;
+    }
+}
+
+
+.nav__link_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width:600px) {
+    
+    .nav__link_container *{
+        display:none;
+    }
+    
 }
