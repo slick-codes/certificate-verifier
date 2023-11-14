@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <title>
+        404 | <%= message %>
+    </title>
+    </title>
+
+    <style>
+        body {
+            height: 100%;
+        }
+
+        main {
+            height: 100%;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 0;
+        }
+
+        main>div {
+            height: calc(100vh - 10em);
+            display: inherit;
+            flex-flow: inherit;
+            justify-content: inherit;
+            align-items: inherit;
+            text-align: inherit;
+        }
+
+        h1 {
+            font-size: 10rem;
+            line-height: 1em;
+            color: var(--primary-color);
+        }
+
+        h5 {
+            font-size: 1.2rem;
+            padding: .5em;
+            background: var(--primary-color);
+            color: white;
+            border-radius: .2em;
+        }
+    </style>
+</head>
+
+<body>
+    <%- include("partials/nav" ) %>
+
+        <main>
+            <div class="message__box">
+                <h1>404</h1>
+                <h5>
+                    <%= message %>
+                </h5>
+                </h5>
+            </div>
+        </main>
+
+</body>
+
+</html>
