@@ -64,6 +64,7 @@ app.use(commonRoutes)
 app.use(certificateRoutes)
 
 
+
 // login 
 app.post("/login", function (req, res, next) {
     try {
@@ -91,6 +92,12 @@ app.post("/login", function (req, res, next) {
 app.post("/logout", function (req, res, next) {
     res.clearCookie("accessToken")
     res.redirect("/login")
+})
+
+
+app.use(function (req, res, next) {
+    let message = req.query.message ?? "Page Not Found"
+    res.render("404", { message })
 })
 
 

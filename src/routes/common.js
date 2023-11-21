@@ -11,10 +11,7 @@ router.get("/preview/:id", controllers.preview)
 
 router.get("/login", controllers.login)
 
-router.use(function (req, res, next) {
-    let message = req.query.message ?? "Page Not Found"
-    res.render("404", { message })
-})
+
 
 
 module.exports = router 
