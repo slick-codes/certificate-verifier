@@ -24,7 +24,7 @@ const { access } = require("fs");
 // setup database 
 require("./config/database").startDB()
 // start redis server
-require("./config/redis-config")
+// require("./config/redis-config")
 
 
 // Middleware to parse request bodies
