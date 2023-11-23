@@ -1,74 +1,87 @@
 @import url(./main.css);
 
-
-.main{
-    display:flex;
-    flex-flow:column;
-    justify-content:center;
-    align-items:center;
+.main {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.info__table{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:rgb(226, 226, 226);
-    padding:4em .5em;
+.info__table {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(226, 226, 226);
+  padding: 4em 0.5em;
 
-    & table{
-        width:100%;
-        max-width:40em;
-    }
+  & table {
+    width: 100%;
+    max-width: 40em;
+  }
 
-    & td{
-        /* border:solid 1px black; */
-        width:50%;
-        background-color:white;
-        padding:.5em;
-        border-radius:0em;
-    }
+  & td {
+    /* border:solid 1px black; */
+    width: 50%;
+    background-color: white;
+    padding: 0.5em;
+    border-radius: 0em;
+  }
 }
 
-.main__container{
-    width:100%;
-    display:inherit;
-    align-items:inherit;
-    justify-content:inherit;
-    flex-flow:column;
-    /* padding-top:5em; */
-    padding-bottom:4em;
-    gap:2em;
+.main__container {
+  width: 100%;
+  display: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+  flex-flow: column;
+  /* padding-top:5em; */
+  padding-bottom: 4em;
+  gap: 2em;
 
-    & > * {
-        width:100%;
-        display:inherit;
-        align-items:inherit;
-        justify-content:inherit;
-    }
+  & > * {
+    width: 100%;
+    display: inherit;
+    align-items: inherit;
+    justify-content: inherit;
+  }
 }
 
-
-.preview__continer{
-    & object, & embed, & img{
-        border:solid 1em rgb(221, 221, 221);
-        background-color:rgb(221, 221, 221);
-        border-radius:1em;
-        width:100%;
-        max-width:60em;
-        /* height:40em; */
-    }
-
+.preview__continer {
+  & object,
+  & embed,
+  & img {
+    border: solid 1em rgb(221, 221, 221);
+    background-color: rgb(221, 221, 221);
+    border-radius: 1em;
+    width: 100%;
+    max-width: 60em;
+    /* height:40em; */
+  }
 }
 
+@media (max-width: 600px) {
+  .info__table {
+    & table {
+      font-size: 0.8rem !important;
+    }
+  }
+}
 
+.passport {
+  background: white;
+  padding: 0.5em;
+}
+.passport img {
+  width: 10em;
+}
 
+.info-container {
+  display: flex;
+  align-items: center;
+  justify-content: Center;
+  width: 100%;
+  gap: 1em;
+}
 
-@media (max-width:600px) {
-    
-    .info__table{
-
-        & table{
-            font-size: .8rem !important;
-        }
-    }    
+table {
 }

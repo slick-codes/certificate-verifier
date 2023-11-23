@@ -86,6 +86,7 @@ app.post("/login", function (req, res, next) {
 
     } catch (error) {
         // handle error
+        console.log(error)
     }
 })
 

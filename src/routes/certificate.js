@@ -14,7 +14,7 @@ let storage = multer.diskStorage({
 
 const upload = multer({ storage: storage })
 
-router.post("/create/cert", upload.single("pdf_file"), controllers.createCert)
+router.post("/create/cert", upload.fields([{ name: "cert_passport" }, { name: "passport" }]), controllers.createCert)
 
 
 module.exports = router

@@ -15,6 +15,18 @@ const CertificateSchema = {
         type: TEXT,
         allowNull: false
     },
+    passport: {
+        type: STRING,
+        allowNull: false
+    },
+    honor: {
+        type: STRING,
+        allowNull: false
+    },
+    qrUrl: {
+        type: STRING,
+        allowNull: false
+    },
     lastName: {
         type: STRING,
         allowNull: false

@@ -110,6 +110,8 @@
                 <label>First Name</label>
                 <input type="text" name="firstName" placeholder="Student's First Name" />
               </div>
+            </section>
+            <section class="form__row">
               <div class="form__col">
                 <label>First Name</label>
                 <input type="text" name="lastName" placeholder="Student's Last Name" />
@@ -120,6 +122,8 @@
                 <label>Middle Name</label>
                 <input type="text" name="middleName" placeholder="Student's Middle Name" />
               </div>
+            </section>
+            <section class="form__row">
               <div class="form__col">
                 <label>Registration Number</label>
                 <input type="text" name="registrationNumber" placeholder="Student's Matriculation Number" />
@@ -136,9 +140,23 @@
                   <option value="School of general studies"></option>
                 </datalist>
               </div>
+            </section>
+            <section class="form__row">
               <div class="form__col">
                 <label>Department</label>
                 <input type="text" name="department" placeholder="Student's Department" />
+              </div>
+            </section>
+            <section class="form__row">
+              <div class="form__col">
+                <label>Honor</label>
+                <select name="honor">
+                  <option value=""></option>
+                  <option value="Distinction">Distinction</option>
+                  <option value="Upper Credit">Upper Credit</option>
+                  <option value="Lower Credit">Lower Credit</option>
+                  <option value="Pass">Pass</option>
+                </select>
               </div>
             </section>
             <section class="form__row single-rows">
@@ -154,7 +172,8 @@
               </div>
             </section>
             <section class="form__row">
-              <button class="image_pdf_selector">
+              <label>Upload Certificate</label>
+              <button class="image_pdf_selector" data-name="cert_passport">
                 <svg width="91" class="upload-icon" height="70" viewBox="0 0 91 70" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -186,7 +205,42 @@
                 </svg>
               </button>
             </section>
-            <section>
+            <section class="form__row">
+              <label>Upload Passport</label>
+              <button class="image_pdf_selector" data-name="passport">
+                <svg width="91" class="upload-icon" height="70" viewBox="0 0 91 70" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M73.5164 28.2957C72.6014 14.0385 62.7486 0.290283 44.6778 0.290283C28.15 0.290283 15.4043 12.6521 14.7293 29.1495C5.68641 31.9807 0.749268 41.7183 0.749268 48.8059C0.749268 59.7187 9.76212 69.2903 20.035 69.2903H33.9636C34.2477 69.2903 34.5202 69.1767 34.7212 68.9745C34.9221 68.7723 35.035 68.4981 35.035 68.2122C35.035 67.9262 34.9221 67.652 34.7212 67.4498C34.5202 67.2476 34.2477 67.134 33.9636 67.134H20.035C10.9021 67.134 2.89212 58.5694 2.89212 48.8059C2.89212 42.2272 8.62212 30.4778 20.035 30.4778H23.2493C23.5334 30.4778 23.8059 30.3642 24.0069 30.162C24.2078 29.9598 24.3207 29.6856 24.3207 29.3997C24.3207 29.1137 24.2078 28.8395 24.0069 28.6373C23.8059 28.4351 23.5334 28.3215 23.2493 28.3215H20.035C18.9443 28.3215 17.9136 28.4444 16.9086 28.6213C17.7486 15.7053 27.505 2.44653 44.6778 2.44653C63.0807 2.44653 71.4636 16.9775 71.4636 30.4778V33.7122C71.4636 33.9981 71.5764 34.2723 71.7774 34.4745C71.9783 34.6767 72.2508 34.7903 72.535 34.7903C72.8191 34.7903 73.0917 34.6767 73.2926 34.4745C73.4935 34.2723 73.6064 33.9981 73.6064 33.7122V30.4584C80.0757 31.1721 88.6064 38.1583 88.6064 48.8059C88.6064 57.0557 80.6971 67.134 71.4636 67.134H55.3921C48.4536 67.134 45.7493 64.4128 45.7493 57.4309V27.8536L54.4878 36.6296C54.5865 36.7327 54.7046 36.815 54.8353 36.8716C54.9659 36.9283 55.1065 36.9583 55.2487 36.9597C55.391 36.9611 55.5321 36.9341 55.6638 36.88C55.7956 36.826 55.9153 36.7461 56.0161 36.6451C56.1168 36.544 56.1965 36.4237 56.2506 36.2913C56.3046 36.1589 56.3319 36.017 56.3309 35.8738C56.3299 35.7307 56.3005 35.5892 56.2446 35.4575C56.1886 35.3259 56.1072 35.2069 56.005 35.1073L46.4457 25.5076C45.1728 24.2311 44.185 24.2311 42.9143 25.5076L33.355 35.1073C33.1598 35.3106 33.0518 35.5829 33.0543 35.8656C33.0567 36.1483 33.1694 36.4187 33.368 36.6186C33.5667 36.8185 33.8354 36.9319 34.1163 36.9343C34.3973 36.9368 34.6679 36.8281 34.87 36.6317L43.6064 27.8536V57.4309C43.6064 65.6333 47.2407 69.2903 55.3921 69.2903H71.4636C81.85 69.2903 90.7493 58.026 90.7493 48.8059C90.7493 37.6646 81.7 28.9512 73.5164 28.2957Z"
+                    fill="black" />
+                </svg>
+                <svg class="loading-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <circle cx="18" cy="12" r="0" fill="currentColor">
+                    <animate attributeName="r" begin=".67" calcMode="spline" dur="1.5s"
+                      keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8" repeatCount="indefinite"
+                      values="0;2;0;0" />
+                  </circle>
+                  <circle cx="12" cy="12" r="0" fill="currentColor">
+                    <animate attributeName="r" begin=".33" calcMode="spline" dur="1.5s"
+                      keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8" repeatCount="indefinite"
+                      values="0;2;0;0" />
+                  </circle>
+                  <circle cx="6" cy="12" r="0" fill="currentColor">
+                    <animate attributeName="r" begin="0" calcMode="spline" dur="1.5s"
+                      keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8" repeatCount="indefinite"
+                      values="0;2;0;0" />
+                  </circle>
+                </svg>
+                <svg class="success-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+                  <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                    <rect width="13" height="13" x=".5" y=".5" rx="3" />
+                    <path d="m4 8l2.05 1.64a.48.48 0 0 0 .4.1a.5.5 0 0 0 .34-.24L10 4" />
+                  </g>
+                </svg>
+              </button>
+            </section>
+
+            <section class="submit-button-container">
               <input type="submit" value="Create" />
             </section>
           </div>
@@ -199,7 +253,9 @@
             <%- cert.qrCode %>
               <h3>Certificate Saved</h3>
               <h1>Successfully</h1>
-              <button>Download QR</button>
+              <a href="<%= cert.qrUrl %>" download="<%= cert.qrUrl %>">
+                <button>Download QR</button>
+              </a>
               <div class="close__button close-success-button">
                 <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect x="0.5" y="0.5" width="40" height="40" rx="20" fill="white" stroke="black" />
@@ -217,28 +273,27 @@
 
 
   <script>
-    const pdfSelectButton = document.querySelector(".image_pdf_selector");
+    const pdfSelectButtons = document.querySelectorAll(".image_pdf_selector");
     const modal = document.querySelector(".modal");
     const uploadButton = document.querySelector(".image_pdf_selector")
 
 
-    if (pdfSelectButton) {
-      pdfSelectButton.onclick = function (event) {
+    pdfSelectButtons.forEach(button => {
+      button.onclick = function (event) {
         // start loading process
-        uploadButton.classList.add("loading")
-        uploadButton.classList.remove("success")
-        uploadButton.classList.remove("upload")
+        event.target.classList.add("loading")
+        event.target.classList.remove("success")
+        event.target.classList.remove("upload")
 
-        console.log(pdfSelectButton)
         document
-          .querySelectorAll(".main-form input[type='file']")
+          .querySelectorAll(`.main-form input[type='file'][name='${event.target.getAttribute("data-name")}']`)
           .forEach((file) => file.remove());
 
         event.preventDefault();
 
         const file = document.createElement("input");
         file.type = "file";
-        file.name = "pdf_file";
+        file.name = event.target.getAttribute("data-name");
         file.style.display = "none";
         file.accept =
           "image/*";
@@ -248,20 +303,22 @@
         file.oninput = function () {
           // stop loading process
           setTimeout(function () {
-            uploadButton.classList.remove("loading")
-            uploadButton.classList.add("success")
-            uploadButton.classList.remove("upload")
+            event.target.classList.remove("loading")
+            event.target.classList.add("success")
+            event.target.classList.remove("upload")
           }, 1000)
         }
       };
-
-      pdfSelectButton.onchange = function (event) { };
+      button.onchange = function (event) { };
 
       document.querySelectorAll(".modal_toggler").forEach((toggler) => {
         toggler.onclick = (event) => modal.classList.toggle("hidden");
       });
 
-    }
+    })
+
+
+
     const closeSuccessButton = document.querySelector(".close-success-button")
 
     if (closeSuccessButton)

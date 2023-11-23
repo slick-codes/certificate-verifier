@@ -1,296 +1,324 @@
 @import url("./main.css");
 
+.nav {
+  & .nav__link_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
+  & button {
+    padding: 0.5em 1em;
+    color: white;
+    font-weight: 700;
 
-
-.nav{
-    & .nav__link_container{
-        display:flex;
-        align-items:center;
-        justify-content:center;
+    &:nth-child(2) {
+      background-color: #399988;
     }
 
-    & button{
-        padding:.5em 1em;
-        color:white;
-        font-weight:700;
-
-        &:nth-child(2){
-            background-color: #399988;
-        }
-
-        &:last-child{
-            border:solid 1px red;
-            background-color:transparent;
-        }
+    &:last-child {
+      border: solid 1px red;
+      background-color: transparent;
     }
+  }
 }
 
-.main{
-    padding:1em 5em;
-    font-size:.8rem;
+.main {
+  padding: 1em 5em;
+  font-size: 0.8rem;
 
-    .table{
-        width:100%;
-    }
+  .table {
+    width: 100%;
+  }
 }
 
 table {
-    text-align:center;
+  text-align: center;
 }
 
-table{
-    /* border:solid 1px black; */
-    border-collapse:collapse;
+table {
+  /* border:solid 1px black; */
+  border-collapse: collapse;
 
-    & td, & th{
-        padding:.8em 0;
-        border:solid 1px black;
-    }
+  & td,
+  & th {
+    padding: 0.8em 0;
+    border: solid 1px black;
+  }
 }
 
-table tr:first-child{
-    position:sticky;
-    top:0;
-    background:rgb(194, 194, 194);
+table tr:first-child {
+  position: sticky;
+  top: 0;
+  background: rgb(194, 194, 194);
 }
 
-table tr{
-    border-top:none;
-    border-bottom:none;
+table tr {
+  border-top: none;
+  border-bottom: none;
 }
 table tr:nth-child(odd):not(:first-child) {
-    background:rgb(236, 236, 236);
+  background: rgb(236, 236, 236);
 }
 
-.form{
-    width:100%;
-    height:100vh;
-    background:rgba(8, 8, 8, 0.773);
-    position:fixed;
-    top:0;
-    left:0;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+.form {
+  width: 100%;
+  height: 100vh;
+  background: rgba(8, 8, 8, 0.773);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  /* align-items:center; */
 }
 
+form,
+.second-form {
+  overflow: auto;
+  background-color: white;
+  padding: 0em 6em;
+  padding-bottom: 3em;
+  /* border-radius:1em; */
 
-form, .second-form{
-    background-color:white;
-    padding:3em 6em;
-    border-radius:1em;
-    
-        & .form__nav{
-            display:flex;
-            justify-content: space-between;
-            align-items:center;
-            padding-bottom:1em;
-        }
-}
-
-.form__row{
-    display:flex;
-    gap: 1em; 
-
-    & > div{
-        gap:.3em;
-        display: flex;
-        flex-flow:column;
-    }
-}
-
-.form__content{
-    display:flex;
+  & .form__nav {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    flex-flow:column;
-    justify-content:center;
-    gap:1em;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    background: white;
+    position: sticky;
+    top: 0;
+  }
 }
 
-.single-rows{
-    width:100%;
+.form__row {
+  display: flex;
+  gap: 1em;
+  flex-flow: column;
 
-    & > div{
-        display:flex;
-        width:100%;
-    }
-
-    & span{
-        position:relative;
-        width:100%;
-        display:block;
-
-        & input{
-            width:100%;
-            padding-right:3.7em;
-        }
-
-        & svg{
-            position:absolute;
-            right:1em;
-            width:1.5em;
-        }
-    }
+  & > div {
+    gap: 0.3em;
+    display: flex;
+    flex-flow: column;
+  }
 }
 
-label{
-    padding-left: 1em;
+.form__content {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  justify-content: center;
+  gap: 1em;
 }
 
-input{
-    border:solid 1px var(--primary-color);
-    padding:.8em 1em;
-    border-radius:.3em;
+.single-rows {
+  width: 100%;
+
+  & > div {
+    display: flex;
+    width: 100%;
+  }
+
+  & span {
+    position: relative;
+    width: 100%;
+    display: block;
+
+    & input {
+      width: 100%;
+      padding-right: 3.7em;
+    }
+
+    & svg {
+      position: absolute;
+      right: 1em;
+      width: 1.5em;
+    }
+  }
 }
 
-.form__row{
-    width:100%;
-    
-    & button{
-        width:100% ;
-        border-radius:.3em;
-        padding:2em 0;
-        border:solid 1px black;
-        background-color:transparent;
-        cursor:pointer;
-    }
-
-    & svg{
-        stroke:rgb(189, 189, 189);
-    }
+label {
+  padding-left: 1em;
 }
 
-input[type="submit"]{
-    padding:1em 4em;
-    border:none;
-    background-color: var(--primary-color);
-    color:white;
-    cursor:pointer;
+input,
+select {
+  border: solid 1px var(--primary-color);
+  padding: 0.8em 1em;
+  border-radius: 0.3em;
+}
+select {
+  background: white;
 }
 
-input[type="submit"]:active{
-    background-color:black;
-    color:white;
+.form__row {
+  width: 100%;
+
+  & button {
+    width: 100%;
+    border-radius: 0.3em;
+    padding: 0em 0;
+    border: solid 1px black;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  & svg {
+    stroke: rgb(189, 189, 189);
+  }
 }
 
-.form.hidden{
-    display:none !important;
+input[type="submit"] {
+  padding: 1em 4em;
+  border: none;
+  background-color: var(--primary-color);
+  color: white;
+  cursor: pointer;
 }
 
-button{
-    cursor:pointer;
+input[type="submit"]:active {
+  background-color: black;
+  color: white;
 }
 
-
-.image_pdf_selector{
-    & svg.upload-icon{
-        display:initial;
-    }
-
-    & svg.loading-icon{
-        display:none;
-        width:5em;
-        height:4em;
-    }
-
-    & svg.success-icon{
-        display: none;
-        color:#399988;
-        width:4em;
-        height:4em;
-    }
+.form.hidden {
+  display: none !important;
 }
 
-
-
-.image_pdf_selector.success{
-    border:solid 3px #399988;
-
-    & svg.upload-icon{
-        display:none;
-    }
-
-    & svg.loading-icon{
-        display:none;
-    }
-
-    & svg.success-icon{
-        display: initial;
-    }
+button {
+  cursor: pointer;
 }
 
+.image_pdf_selector {
+  padding: 1em 0 !important;
 
-.image_pdf_selector.loading{
-    & svg.upload-icon{
-        display:none;
-    }
+  & svg {
+    height: 2em !important;
+  }
 
-    & svg.loading-icon{
-        display:initial;
-    }
+  & svg.upload-icon {
+    display: initial;
+  }
 
-    & svg.success-icon{
-        display: none;
-    }
+  & svg.loading-icon {
+    display: none;
+    width: 4em;
+    height: 3em;
+  }
+
+  & svg.success-icon {
+    display: none;
+    color: #399988;
+    width: 4em;
+    height: 4em;
+  }
 }
 
+.image_pdf_selector.success {
+  border: solid 3px #399988;
 
+  & svg.upload-icon {
+    display: none;
+  }
 
+  & svg.loading-icon {
+    display: none;
+  }
 
-.success-submition .qr svg{
-    display:block;
-    width:15em;
-    height:15em;
-    /* padding:3em; */
+  & svg.success-icon {
+    display: initial;
+  }
 }
 
+.image_pdf_selector.loading {
+  & svg.upload-icon {
+    display: none;
+  }
+
+  & svg.loading-icon {
+    display: initial;
+  }
+
+  & svg.success-icon {
+    display: none;
+  }
+}
+
+.success-submition .qr svg {
+  display: block;
+  width: 15em;
+  height: 15em;
+  /* padding:3em; */
+}
 
 .qr {
-    display:flex;
-    flex-flow:column;
-    justify-content:center;
-    align-items:center;
-    padding:0px 4em;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 4em;
 
+  & button {
+    padding: 1em 2em;
+    color: white;
+    background-color: var(--primary-color);
+    border-radius: 0.3em;
+    font-weight: 600;
 
-    & button{
-        padding:1em 2em;
-        color:white;
-        background-color: var(--primary-color);
-        border-radius:.3em;
-        font-weight: 600;
-
-        &:active{
-            background-color:black;
-            color:white;
-        }
+    &:active {
+      background-color: black;
+      color: white;
     }
+  }
 
-    & h1{
-        color:#399988;
-        padding-bottom:.5em;
+  & h1 {
+    color: #399988;
+    padding-bottom: 0.5em;
+  }
+
+  & .close__button {
+    padding-top: 2em;
+
+    & svg {
+      width: 2em;
+      height: 2em;
+      cursor: pointer;
+      stroke-width: 5px;
+      border-radius: 59em;
     }
-
-    & .close__button{
-        padding-top:2em;
-
-        & svg{
-            width:2em;
-            height:2em;
-            cursor:pointer;
-            stroke-width:5px;
-            border-radius:59em;
-        }
-    }
+  }
 }
 
-.logout-form{
-    padding:initial !important;
-    background-color: initial !important;
+.logout-form {
+  padding: initial !important;
+  background-color: initial !important;
 }
 
-table a{
-    color:var(--primary-color);
-    text-decoration:underline;
+table a {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.form__row {
+  padding-bottom: 0;
+  gap: 0.2em !important;
+}
+
+input[type="submit"] {
+  width: 100%;
+}
+
+.submit-button-container {
+  margin-top: 0.5em;
+  width: 100%;
+}
+
+.image_pdf_selector > * {
+  pointer-events: none;
+}
+
+.second-form {
+  display: flex;
 }

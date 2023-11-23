@@ -2,7 +2,7 @@ const Certificate = require("../models/Certificate")
 const jwt = require("jsonwebtoken")
 
 module.exports.home = async function (req, res, next) {
-    return res.render("index", {})
+    return res.render("login", { message: "", body: {}, ...req.body })
 }
 
 

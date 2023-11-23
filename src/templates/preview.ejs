@@ -13,36 +13,49 @@
         <main class="main">
             <dev class="main__container">
                 <div class="info__table">
-                    <table>
-                        <tr>
-                            <td>Matriculation Numb</td>
-                            <td>
-                                <%= cert.registrationNumber %>
-                            </td>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Holder's Name</td>
-                            <td>
-                                <%= `${cert.firstName} ${cert.lastName}` %>
-                            </td>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>School</td>
-                            <td>
-                                <%= cert.school %>
-                            </td>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Year Of Graduation</td>
-                            <td>
-                                <%= cert.graduationYear %>
-                            </td>
-                            </td>
-                        </tr>
-                    </table>
+                    <div class="info-container">
+                        <div class="passport">
+                            <img src="<%= cert.passport %>" alt="">
+                            <p>Passport</p>
+                        </div>
+
+                        <table>
+                            <tr>
+                                <td>Matriculation Numb</td>
+                                <td>
+                                    <%= cert.registrationNumber %>
+                                </td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Holder's Name</td>
+                                <td>
+                                    <%= `${cert.firstName} ${cert.lastName}` %>
+                                </td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>School</td>
+                                <td>
+                                    <%= cert.school %>
+                                </td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Year Of Graduation</td>
+                                <td>
+                                    <%= cert.graduationYear %>
+                                </td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Honor</td>
+                                <td>
+                                    <%= cert.honor %>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
                 <div class="preview__continer">
                     <img src="<%= cert.certUrl%>" alt="<%=cert.certUrl%>">
